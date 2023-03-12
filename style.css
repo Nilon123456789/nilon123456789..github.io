@@ -1,16 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
 .base {
     padding-top: 5vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 50%;
+    background-color: #fafafa;
     flex-direction: column;
   }
   
   .base img {
     width: 250px;
     height: 250px;
-    margin-bottom: 5pt;
+    margin-bottom: 50pt;
     border-radius: 50%;
     border-color: #333;
     border-width: 5px;
@@ -28,12 +35,172 @@
   .base p {
     font-size: 18px;
     margin: 0;
+    margin-top: 10px;
     color: #666;
   }
 
-  footer {
+  .base .section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .base .btn {
+    background: #fff;
+    backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .125rem;
+    box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,Helvetica,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    padding: .875rem 1.125rem;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    text-align: left;
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-decoration:none
+  }
+
+  .base .btn:not(:disabled):hover {
+    transform: scale(1.05);
+  }
+
+  .base .btn:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+  }
+
+  .base .btn:focus {
+    outline: 0 solid transparent;
+  }
+
+  .base .btn:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
     position: absolute;
-    bottom: 0;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
+  }
+
+  .base .btn:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+
+  .base .btn:focus:not(:focus-visible):before {
+    border-width: 0;
+  }
+
+  .base .btn:not(:disabled):active {
+    transform: translateY(.125rem);
+  }
+
+  .base .btn a {
+    color: #212121;
+    text-decoration: none;
+  }
+
+  .projects {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projects h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+  }
+
+  .projects div {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: #212121;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #fbfbfb;
+  }
+
+  .projects .project h3 {
+    font-size: 32px;
+    margin: 0;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  .projects p {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+    color: #666;
+  }
+
+  .projects .project .btn {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin-bottom: 1em;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .projects .project .btn:hover {
+    background-color: rgb(249,250,251);
+  }
+
+  .projects .project .btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .projects .project .btn:focus-visible {
+    box-shadow: none;
+  }
+
+  .project .btn a {
+    color: #212121;
+    text-decoration: none;
+  }
+
+  .projects .project img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10pt;
+  }  
+
+  footer {
     width: 100%;
     height: 60px;
     background-color: #f5f5f5;
